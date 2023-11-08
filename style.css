@@ -1,0 +1,151 @@
+html, body {
+    font-family: New Rocker;
+
+    height: 100%;
+    margin: 0;
+
+    background-image: url('./assets/background.png');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    margin: auto;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    background-color: antiquewhite;
+    opacity: 0.75;
+    padding: 1% 5%;
+}
+
+.handwritten {
+    font-family: 'Beth Ellen';
+    line-height: 1.5em;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.title-text {
+    font-size: 42px;
+    transition: opacity 0.3s;
+    padding: 11px;
+}
+
+.icon {
+    opacity: 0;
+    display: none;
+}
+
+.header-title:hover .title-text {
+    opacity: 0;
+    display: none; /* Hide text on hover */
+}
+
+.header-title:hover .icon {
+    opacity: 1;
+    display: inline; /* Display icon on hover */
+}
+
+.hidden-menu {
+    opacity: 0;
+    display: none;
+}
+
+.header-title:hover + .hidden-menu {
+    opacity: 1;
+    display: block;
+}
+
+.material-symbols-outlined {
+    padding: 20px;
+	font-variation-settings:
+		'FILL' 0,
+		'wght' 400,
+		'GRAD' 0,
+		'opsz' 24;
+	color: white;
+}
+
+.material-symbols-outlined:hover {
+	font-variation-settings:
+		'FILL' 1,
+		'wght' 400,
+		'GRAD' 0.5,
+		'opsz' 24;
+	color: rgb(231, 205, 57);
+	transform: scale(1.5);
+	transition: transform 0.3s;
+}
+
+.menu-squished {
+    width: 33%;
+    padding: 5px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    margin: 0 auto; /* Center horizontally (alternative method) */
+}
+
+header {
+    background: black;
+    opacity: 0.75;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+nav {
+    background: black;
+    opacity: 0.75;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+article {
+    margin-top: 20px;
+}
+
+footer {
+    background: black;
+    color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
