@@ -9,6 +9,7 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
     
     margin: auto;
 }
@@ -27,9 +28,9 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 30%;
+    min-width: 666px;
     margin: auto;
-    background-color: antiquewhite;
-    opacity: 0.75;
+    background-color: rgba(221, 218, 189, 0.75);
     padding: 1% 5%;
 }
 
@@ -39,6 +40,8 @@ html, body {
 }
 
 .header-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,6 +101,14 @@ html, body {
 	transition: transform 0.3s;
 }
 
+.menu {
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .menu-squished {
     width: 33%;
     padding: 5px;
@@ -107,11 +118,40 @@ html, body {
     margin: 0 auto; /* Center horizontally (alternative method) */
 }
 
+.menu-item {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+.portalback {
+    width: 60%;
+    margin: 0% auto;
+    background-image: url(./assets/portal_frame.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+}
+
+.portalfront {
+    width: 100%;
+    mix-blend-mode: darken;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portalfront:hover {
+    opacity: 1;
+}
+
 header {
-    background: black;
-    opacity: 0.75;
+    background: rgba(0, 0, 0, 0.75);
     color: white;
-    padding: 5px;
     text-align: center;
 }
 
@@ -142,7 +182,7 @@ article {
 }
 
 footer {
-    background: black;
+    background: rgba(0, 0, 0, 0.75);
     color: white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-align: center;
