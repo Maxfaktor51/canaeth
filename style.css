@@ -24,14 +24,68 @@ html, body {
     flex: 1;
 }
 
+.coin {
+    position: relative;
+    min-width: 175px;
+    min-height: 175px;
+    width: 15vb;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-image: url(./assets/coin_flat_bw.PNG);
+
+    background-size: cover;
+    transition: transform 0.3s;
+}
+
+.coin:hover {
+    background-size: 0%;
+    transform: scale(1.1);
+}
+
+.coin span {
+    position: absolute;
+    top: 0;
+    left: calc(100% / 3 * var(--i));
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.coin img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.coin img:nth-child(0),
+.coin span:hover + img {
+    opacity: 1;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-column {
+    flex: fit-content;
+    margin: auto 10px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
     min-width: 666px;
+    max-width: 1000px;
     margin: auto;
     background-color: rgba(221, 218, 189, 0.75);
-    padding: 1% 5%;
+    padding: 2vb;
 }
 
 .handwritten {
@@ -40,8 +94,7 @@ html, body {
 }
 
 .header-title {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: auto 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,28 +157,31 @@ html, body {
 .menu {
     padding: 40px;
     display: flex;
-    justify-content: space-around;
+    max-width: 1000px;
     align-items: center;
     margin-top: 20px;
 }
 
 .menu-squished {
     width: 33%;
+    margin: auto 0px;
     padding: 5px;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;
-    margin: 0 auto; /* Center horizontally (alternative method) */
 }
 
 .menu-item {
     width: 100%;
     height: auto;
-    transition: transform 0.3s;
+    filter: sepia(1);
+    position: relative;
+    z-index: 0;
+    transition: transform 0.3s, filter 0.3s;
 }
 
 .menu-item:hover {
     transform: scale(1.1);
+    filter: sepia(0);
+    z-index: 1;
     transition: transform 0.3s;
 }
 
@@ -157,6 +213,10 @@ header {
 
 h2, h3 {
     text-align: center;
+}
+
+a {
+    color: darkgoldenrod;
 }
 
 nav {
